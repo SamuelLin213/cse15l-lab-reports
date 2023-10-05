@@ -12,7 +12,7 @@ Running cd with no arguments changes the directory to the home directory. If no 
 ![Image](./images/cd2.png)  
 Running cd with a directory as an argument will change the directory to the specified arugment. This output is not an error. 
 
-```cd lecture1/Hello.java```  
+```cd lecture1/Hello.java```    
 ![Image](./images/cd3.png)  
 Running cd with a file as an argument will result in an error. This error results as we're unable to switch directory into a file. `cd` only works with directories, so a file argument results in an error.
 
