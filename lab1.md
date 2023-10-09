@@ -5,7 +5,7 @@
 ### cd
 
 ```cd```    
-![Image](./images/cd1.png)    
+![Image](https://github.com/SamuelLin213/cse15l-lab-reports/blob/main/images/cd1.png)    
 Running cd with no arguments changes the directory to the home directory. If no argument is provided, `cd` will change directory to home. This output is not an error.
 
 ```cd lecture1/```    
