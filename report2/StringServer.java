@@ -27,10 +27,8 @@ class Handler implements URLHandler {
               strings.add(temp); // add string to list
               return getList();
           }
-        } else {
-            return "404 Not Found!";
-        }
     }
+    return "404 Not Found!";
 }
 
 class StringServer {
