@@ -20,15 +20,18 @@ class Handler implements URLHandler {
     }
 
     public String handleRequest(URI url) {
-        if (url.getPath().equals("/add-message")) {
+        if (url.getPath().equals("/add-message"))
+        {
           String[] parameters = url.getQuery().split("=");
-          if (parameters[0].equals("s")) {
+          if (parameters[0].equals("s"))
+          {
               String temp = parameters[1];
               strings.add(temp); // add string to list
               return getList();
           }
+        }
+      return "404 Not Found!";
     }
-    return "404 Not Found!";
 }
 
 class StringServer {
