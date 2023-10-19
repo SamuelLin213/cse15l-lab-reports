@@ -12,7 +12,7 @@ class Handler implements URLHandler {
       String res = "";
       int cnt = 1;
 
-      for(String s: strings):
+      for(String s: strings)
       {
         res += Integer.toString(cnt++) + ". " + s + "\n";
       }
