@@ -2,13 +2,13 @@
 
 ## Part 1
 
-```/add-message?s=Hello```    
+`/add-message?s=Hello`<br />
 ![Image](./report2/add-message1.png)  
 1. The `main()`, `handleRequest()` and `getList()` methods are called.  
 2. `main()` takes in an array of strings, `handleRequest()` takes in a URI and `getList()` doesn't have any parameters. Additionally, there's a string `ArrayList` in the `Handler` class.  
 3. The `ArrayList` changes from this request, with "Hello" stored in the first element.  
 
-```/add-message?s=How are you```    
+`/add-message?s=How are you`<br />
 ![Image](./report2/add-message2.png)  
 1. The `main()`, `handleRequest()` and `getList()` methods are called.  
 2. `main()` takes in an array of strings, `handleRequest()` takes in a URI and `getList()` doesn't have any parameters. Additionally, there's a string `ArrayList` in the `Handler` class.  
