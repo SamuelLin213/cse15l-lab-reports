@@ -74,3 +74,7 @@ Path to public key: <br />
 ![Image](./report2/publicKey.png) <br />
 Login without password: <br />
 ![Image](./report2/login.png) <br />   
+
+
+## Part 3
+Something I learned in week 2 and 3 was how to launch a server and specify which port to launch it on. In the past, when I developed with Django, the server was usually hosted on localhost and with port 8080, so it's interesting to learn you can specify the port number. In addition, I don't have much experience with ssh, so it was interesting learning how to use it to access a remoote server. 
