@@ -68,9 +68,9 @@ class StringServer {
 
 ## Part 2
 
-Path to private key:&nbsp; 
-![Image](./report2/privateKey.png)&nbsp;
-Path to public key:&nbsp;
-![Image](./report2/publicKey.png)&nbsp;
-Login without password:&nbsp;
-![Image](./report2/login.png)&nbsp;    
+Path to private key: <br />
+![Image](./report2/privateKey.png) <br />
+Path to public key: <br />
+![Image](./report2/publicKey.png) <br />
+Login without password: <br />
+![Image](./report2/login.png) <br />   
