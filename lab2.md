@@ -14,7 +14,7 @@
 2. `main()` takes in an array of strings, `handleRequest()` takes in a URI and `getList()` doesn't have any parameters. Additionally, there's a string `ArrayList` in the `Handler` class.  
 3. The `ArrayList` changes from this request, with "How are you" being stored in the second element.  
 
-# Code for `StringServer`
+### Code for `StringServer`
 ```
 import java.io.IOException;
 import java.net.URI;
@@ -65,3 +65,12 @@ class StringServer {
     }
 }
 ```
+
+## Part 2
+
+Path to private key:
+![Image](./report2/privateKey.png)
+Path to public key:
+![Image](./report2/publicKey.png)  
+Login without password:
+![Image](./report2/login.png)  
