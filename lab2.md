@@ -2,18 +2,6 @@
 
 ## Part 1
 
-`/add-message?s=Hello`<br />
-![Image](./report2/add-message1.png)  
-1. The `main()`, `handleRequest()` and `getList()` methods are called.  
-2. `main()` takes in an array of strings, `handleRequest()` takes in a URI and `getList()` doesn't have any parameters. Additionally, there's a string `ArrayList` in the `Handler` class.  
-3. The `ArrayList` changes from this request, with "Hello" stored in the first element.  
-
-`/add-message?s=How are you`<br />
-![Image](./report2/add-message2.png)  
-1. The `main()`, `handleRequest()` and `getList()` methods are called.  
-2. `main()` takes in an array of strings, `handleRequest()` takes in a URI and `getList()` doesn't have any parameters. Additionally, there's a string `ArrayList` in the `Handler` class.  
-3. The `ArrayList` changes from this request, with "How are you" being stored in the second element.  
-
 ### Code for `StringServer`
 ```
 import java.io.IOException;
@@ -65,6 +53,18 @@ class StringServer {
     }
 }
 ```
+
+`/add-message?s=Hello`<br />
+![Image](./report2/add-message1.png)  
+1. The `main()`, `handleRequest()` and `getList()` methods are called.  
+2. `main()` takes in an array of strings, `handleRequest()` takes in a URI and `getList()` doesn't have any parameters. Additionally, there's a string `ArrayList` in the `Handler` class.  
+3. The URL passed in has "?s=Hello" at the end. As a result, the first parameter that's parsed is "s", and the second parameter is "Hello". The `ArrayList` changes from this request, with "Hello" stored in the first element of this array. When `getList()` is called, "Hello" is returned.  
+
+`/add-message?s=How are you`<br />
+![Image](./report2/add-message2.png)  
+1. The `main()`, `handleRequest()` and `getList()` methods are called.  
+2. `main()` takes in an array of strings, `handleRequest()` takes in a URI and `getList()` doesn't have any parameters. Additionally, there's a string `ArrayList` in the `Handler` class.  
+3. The URL passed in has "?s=How are you" at the end. As a result, the first parameter that's parsed is "s", and the second parameter is "How are you". The `ArrayList` changes from this request, with "How are you" stored in the second element, and the first element remaining as "Hello". When `getList()` is called, "Hello\nHow are you" is returned.    
 
 ## Part 2
 
