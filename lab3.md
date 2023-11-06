@@ -21,7 +21,7 @@ public void testReverseInPlaceFail() {
 }
 ```
 
-Passing input:
+Passing input:  
 Associated code:  
 ```
 static void reverseInPlace(int[] arr) {
