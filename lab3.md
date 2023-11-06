@@ -106,3 +106,6 @@ We can use this option to find a specific string in a file, while also returning
 We can use this option to find a specific string in a directory, while also returning the line numbers:
 ```grep -rn "overweight" technical/biomed/ | head```
 ![Image](./report3/nDir.png)
+
+
+I used [this article on GeeksforGeeks](https://www.geeksforgeeks.org/grep-command-in-unixlinux/) as a resource for all four command options.
