@@ -72,10 +72,37 @@ the value at the left index, we can update the right index with this temporary v
 Let's research the `grep` command.  
 
 ### The `-i` option:
-The `-i` option allows us to ignore case when searching for a string.  
+The `-i` option allows us to ignore case when searching for a string. This option is useful is we don't care about matching case and want to find all results regardless of the case. 
 We can use this option to find a specific string in a file, while ignoring case:
 ```grep -i "RR74" charCount.txt```
 ![Image](./report3/iFile.png)   
 We can use this option to find a specific string in a directory, while ignoring case:
 ```grep -ri "OLDER ADULTS" technical/biomed/```
 ![Image](./report3/iDir.png)   
+
+### The `-w` option:
+The `-w` option allows us to match whole words instead of substrings, when searching for a string. This option allows us to ensure we only find whole words, instead of the default behavior of finding any matching substring. For example, if we want to find just the string "java", using `-w` allows us to avoid returning any "javascript" results. 
+We can use this option to find a specific string in a file, only returning whole word results:
+```grep -w "technical" base-pair.txt```
+![Image](./report3/wFile.png)   
+We can use this option to find a specific string in a directory, only returning whole word results:
+```grep -rw "overweight" technical/biomed/ | head```
+![Image](./report3/wDir.png)
+
+### The `-o` option:
+The `-o` option allows us to only return the matched strings, when searching for a string. The default results return the entire line which contains the matching string. However, if we only want the matched string in the results, we can use this option.  
+We can use this option to find a specific string in a file, only returning matched results:
+```grep -o "technical" base-pair.txt```
+![Image](./report3/oFile.png)   
+We can use this option to find a specific string in a directory, only returning matched results:
+```grep -ro "overweight" technical/biomed/ | head```
+![Image](./report3/oDir.png)
+
+### The `-n` option:
+The `-n` option allows us to also show the line number of the matched string, when searching for a string. The default results return the entire line which contains the matching string without the line number. However, if we also want to know the line number where the match occurs, we can use this option.  
+We can use this option to find a specific string in a file, while also returning the line numbers:
+```grep -n "technical" base-pair.txt```
+![Image](./report3/nFile.png)   
+We can use this option to find a specific string in a directory, while also returning the line numbers:
+```grep -rn "overweight" technical/biomed/ | head```
+![Image](./report3/nDir.png)
