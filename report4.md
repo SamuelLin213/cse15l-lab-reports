@@ -16,8 +16,8 @@ Keys pressed: `cd lab7/` and `bash test.sh`
 I `cd` into the `lab7/` folder, and then run the tests using the `test.sh` script. The second test fails. 
 
 ## Step 7 Editing the code file to pass the tests
-![Image](./report4/s4_1.png)
-![Image](./report4/s4_2.png)
+![Image](./report4/s4_1.png)  
+![Image](./report4/s4_2.png)  
 Keys pressed: `vim Li<tab>.java` and `?index1<enter>er2:wq<enter>`  
 I then open the `.java` file in `vim`. I use the tab completion to open the file faster. Inside `vim`, I use the following keystrokes to update the code:  
 * `?index1<enter>`: this finds the first occurence of `index1` backwards
