@@ -18,7 +18,7 @@ I `cd` into the `lab7/` folder, and then run the tests using the `test.sh` scrip
 ## Step 7 Editing the code file to pass the tests
 ![Image](./report4/s4_1.png)
 ![Image](./report4/s4_2.png)
-Keys pressed: `vim Li<tab>.java` and `?index1<enter>er2:wq<enter>`
+Keys pressed: `vim Li<tab>.java` and `?index1<enter>er2:wq<enter>`  
 I then open the `.java` file in `vim`. I use the tab completion to open the file faster. Inside `vim`, I use the following keystrokes to update the code:  
 * `?index1<enter>`: this finds the first occurence of `index1` backwards
 *  `e`: this jumps to the end of `index1`
@@ -27,10 +27,10 @@ I then open the `.java` file in `vim`. I use the tab completion to open the file
 
 ## Step 8 Rerunning the tests, with passing results
 ![Image](./report4/s5.png)
-Keys pressed: `<up><up><enter>`
+Keys pressed: `<up><up><enter>`  
 The `bash test.sh` command was 2 up in the command history, so I used the up arrow twice to access it. 
 
 ## Step 9 Pushing to Github
 ![Image](./report4/s6.png)
-Keys pressed: `git add .`, `git commit -m "fix tests"` and `git push origin main`
+Keys pressed: `git add .`, `git commit -m "fix tests"` and `git push origin main`  
 After fixing the code file to pass the tests, I use `add`, `commit` and `push` commands to push the code to Github.
