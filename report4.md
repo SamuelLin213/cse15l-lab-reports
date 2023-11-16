@@ -1,111 +1,36 @@
-# Lab Report 3: Bugs and Commands
+# Lab Report 4: Vim
 
-## Part 1: Bugs
+## Step 4 Logging into ieng6
+![Image](./report4/s1.png)  
+Keys pressed: `ssh cs15lfa23st@ieng6.ucsd.edu`  
+To log into the remote server, I use `ssh` with the corresponding server address.  
 
-Failure-inducing input:  
-Associated code:  
-```
-static void reverseInPlace(int[] arr) {
-  for(int i = 0; i < arr.length; i += 1) {
-    arr[i] = arr[arr.length - i - 1];
-  }
-}
-```
-JUnit Test:  
-```
-@Test
-public void testReverseInPlaceFail() {
-  int[] input1 = { 3, 0};
-  ArrayExamples.reverseInPlace(input1);
-  assertArrayEquals(new int[]{ 0, 3 }, input1);
-}
-```
+## Step 5 Cloning the respoitory
+![Image](./report4/s2.png)  
+Keys pressed: `git clone git@github.com:SamuelLin213/lab7.git`  
+To clone the repository, I use `git clone` with the `ssh` URL of my forked repository.  
 
-Passing input:  
-Associated code:  
-```
-static void reverseInPlace(int[] arr) {
-  for(int i = 0; i < arr.length; i += 1) {
-    arr[i] = arr[arr.length - i - 1];
-  }
-}
-```
-JUnit Test:  
-```
-@Test
-public void testReverseInPlace() {
-  int[] input1 = { 3 };
-  ArrayExamples.reverseInPlace(input1);
-  assertArrayEquals(new int[]{ 3 }, input1);
-}
-```
+## Step 6 Running the tests, with failing results
+![Image](./report4/s3.png)
+Keys pressed: `cd lab7/` and `bash test.sh`  
+I `cd` into the `lab7/` folder, and then run the tests using the `test.sh` script. The second test fails. 
 
-Symptom of bug:
-![Image](./report3/symptom.png)  
+## Step 7 Editing the code file to pass the tests
+![Image](./report4/s4_1.png)
+![Image](./report4/s4_2.png)
+Keys pressed: `vim Li<tab>.java` and `?index1<enter>er2:wq<enter>`
+I then open the `.java` file in `vim`. I use the tab completion to open the file faster. Inside `vim`, I use the following keystrokes to update the code:  
+* `?index1<enter>`: this finds the first occurence of `index1` backwards
+*  `e`: this jumps to the end of `index1`
+*  `r2`: this updates `index1` to `index2`
+*  `:wq`: this saves the code file and exits back to the terminal
 
-Fixing the bug:  
-Code before:
-```
-static void reverseInPlace(int[] arr) {
-  for(int i = 0; i < arr.length; i += 1) {
-    arr[i] = arr[arr.length - i - 1];
-  }
-}
-```
-Code after:
-```
-static void reverseInPlace(int[] arr) {
-  for(int i = 0; i < arr.length/2; i += 1) {
-    int temp = arr[i];
-    arr[i] = arr[arr.length - i - 1];
-    arr[arr.length - i - 1] = temp;
-  }
-}
-```
+## Step 8 Rerunning the tests, with passing results
+![Image](./report4/s5.png)
+Keys pressed: `<up><up><enter>`
+The `bash test.sh` command was 2 up in the command history, so I used the up arrow twice to access it. 
 
-In order to fix this bug, we only need to traverse through half the array, since we're essentially starting from the left and right edges and working inwards. By the time the  
-index reaches the middle of the array, we would've reversed the entire array. Additionally, we need a temporary variable to the value at the index. After we update  
-the value at the left index, we can update the right index with this temporary variable.
-
-
-## Part 2: Researching commands
-Let's research the `grep` command.  
-
-### The `-i` option:
-The `-i` option allows us to ignore case when searching for a string. This option is useful is we don't care about matching case and want to find all results regardless of the case. 
-We can use this option to find a specific string in a file, while ignoring case:
-```grep -i "RR74" charCount.txt```
-![Image](./report3/iFile.png)   
-We can use this option to find a specific string in a directory, while ignoring case:
-```grep -ri "OLDER ADULTS" technical/biomed/```
-![Image](./report3/iDir.png)   
-
-### The `-w` option:
-The `-w` option allows us to match whole words instead of substrings, when searching for a string. This option allows us to ensure we only find whole words, instead of the default behavior of finding any matching substring. For example, if we want to find just the string "java", using `-w` allows us to avoid returning any "javascript" results. 
-We can use this option to find a specific string in a file, only returning whole word results:
-```grep -w "technical" base-pair.txt```
-![Image](./report3/wFile.png)   
-We can use this option to find a specific string in a directory, only returning whole word results:
-```grep -rw "overweight" technical/biomed/ | head```
-![Image](./report3/wDir.png)
-
-### The `-o` option:
-The `-o` option allows us to only return the matched strings, when searching for a string. The default results return the entire line which contains the matching string. However, if we only want the matched string in the results, we can use this option.  
-We can use this option to find a specific string in a file, only returning matched results:
-```grep -o "technical" base-pair.txt```
-![Image](./report3/oFile.png)   
-We can use this option to find a specific string in a directory, only returning matched results:
-```grep -ro "overweight" technical/biomed/ | head```
-![Image](./report3/oDir.png)
-
-### The `-n` option:
-The `-n` option allows us to also show the line number of the matched string, when searching for a string. The default results return the entire line which contains the matching string without the line number. However, if we also want to know the line number where the match occurs, we can use this option.  
-We can use this option to find a specific string in a file, while also returning the line numbers:
-```grep -n "technical" base-pair.txt```
-![Image](./report3/nFile.png)   
-We can use this option to find a specific string in a directory, while also returning the line numbers:
-```grep -rn "overweight" technical/biomed/ | head```
-![Image](./report3/nDir.png)
-
-
-I used [this article on GeeksforGeeks](https://www.geeksforgeeks.org/grep-command-in-unixlinux/) as a resource for all four command options.
+## Step 9 Pushing to Github
+![Image](./report4/s6.png)
+Keys pressed: `git add .`, `git commit -m "fix tests"` and `git push origin main`
+After fixing the code file to pass the tests, I use `add`, `commit` and `push` commands to push the code to Github.
