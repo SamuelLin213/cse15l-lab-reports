@@ -41,7 +41,7 @@ public void testReverseInPlace() {
 ```
 
 Symptom of bug:
-Here are the tests in ArrayTests.java. We see that the test that fails is testReverseInPlaceFail(), where the instead of `[0, 3]`, the output is `[3, 0]`.
+Here are the tests in ArrayTests.java. We see that the test that fails is testReverseInPlaceFail(), where the instead of `[0, 3]`, the output is `[3, 0]`.  
 ![Image](./report3/tests.png)  
 ![Image](./report3/symptom.png)  
 
