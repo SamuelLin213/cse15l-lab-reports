@@ -13,14 +13,14 @@ Here is what my tests file looks like now.
 
 ### Set-up
 File structure:  
-|-ListExamples.java
-|-ListExamplesTests.java
-|-StringChecker.class
-|-test.sh
-Contents of test file before fixing the bug:
+|-ListExamples.java  
+|-ListExamplesTests.java  
+|-StringChecker.class  
+|-test.sh  
+Contents of test file before fixing the bug:  
 ![Image](./report5/error.png)  
 Command Line to trigger bug:  
-```bash test.sh```
+```bash test.sh```   
 Description on how to fix bug:   
 The student was attempting to test an edge case where the array passed in contains multiple datatypes. It's also possible they forgot the quotes around the numbers. To fix the bug, simply convert the numbers to string and ensure the numbers are in the right order in each input string (before any letters).
 
