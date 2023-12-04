@@ -18,7 +18,7 @@ File structure:
 |-StringChecker.class  
 |-test.sh  
 Contents of test file before fixing the bug:  
-![Image](./report5/error.png)  
+![Image](./report5/beforeTests.png)  
 Command Line to trigger bug:  
 ```bash test.sh```   
 Description on how to fix bug:   
